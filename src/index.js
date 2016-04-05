@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     Application: require('./Application'),
     Plugin: require('./Plugin'),
