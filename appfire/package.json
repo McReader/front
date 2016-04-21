@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "mcreader215@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/McReader/front/issues"
+  },
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {},
+  "directories": {},
+  "homepage": "https://github.com/McReader/front#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "mcreader215@gmail.com",
+      "name": "mcreader"
+    }
+  ],
+  "name": "appfire",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McReader/front.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.6"
+}

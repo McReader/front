@@ -21,9 +21,6 @@ class Application {
 
 
     this.plugins = new Map();
-    this.s = new Store('app', {});
-
-
     this.manifest = manifest;
 
 
