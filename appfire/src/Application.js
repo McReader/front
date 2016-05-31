@@ -26,7 +26,7 @@ class Application {
 
     (this.manifest.plugins || []).forEach(meta => {
       let Constructor = meta.type;
-      this.definePlugin(new Constructor(meta.id));
+      this.definePlugin(new Constructor(meta.id), meta);
     });
 
   }
@@ -76,22 +76,16 @@ class Application {
   }
 
 
-  definePlugin(ev) {
-
-
-    if (!ev || this.plugins.has(ev.id)) {
+  definePlugin(plugin, meta) {
+    if (!plugin || this.plugins.has(plugin.id)) {
       return;
     }
 
+    plugin.init(this.manifest, meta);
 
-    ev.init(this.manifest);
-
-
-    this.plugins.set(ev.id, ev);
-
+    this.plugins.set(plugin.id, plugin);
 
     return this;
-
   }
 
 

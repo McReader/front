@@ -95,7 +95,7 @@ export default class MiddlewarePlugin extends Plugin {
     if (!msg) {
       msg = this.DEFAULT_ERROR_MESSAGE[status] || 'Error';
     }
-    return Promise.reject(new ServerError(msg));
+    return Promise.reject(new ServerError(msg, status));
   }
 
 }

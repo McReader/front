@@ -31,7 +31,7 @@ var Plugin = function () {
 
   _createClass(Plugin, [{
     key: 'init',
-    value: function init(manifest) {
+    value: function init(manifest, meta) {
       return this;
     }
 

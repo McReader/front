@@ -29,12 +29,12 @@ var ServerError = function (_Error) {
    * @author Dzianis_Roi
    * */
 
-  function ServerError(status, message) {
+  function ServerError(message, status) {
     _classCallCheck(this, ServerError);
 
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ServerError).call(this, message));
 
-    _this.statusCode(status || 500);
+    _this.status = status || 500;
     _this.message = message;
 
     Error.captureStackTrace(_this);

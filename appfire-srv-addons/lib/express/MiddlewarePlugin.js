@@ -141,7 +141,7 @@ var MiddlewarePlugin = function (_Plugin) {
       if (!msg) {
         msg = this.DEFAULT_ERROR_MESSAGE[status] || 'Error';
       }
-      return Promise.reject(new _ServerError2['default'](msg));
+      return Promise.reject(new _ServerError2['default'](msg, status));
     }
   }]);
 

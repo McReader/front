@@ -13,10 +13,10 @@ export default class ServerError extends Error {
    * @param {number} [status=500] - HTTP-status value.
    * @author Dzianis_Roi
    * */
-  constructor(status, message) {
+  constructor(message, status) {
     super(message);
 
-    this.statusCode(status || 500);
+    this.status = status || 500;
     this.message = message;
 
     Error.captureStackTrace(this);

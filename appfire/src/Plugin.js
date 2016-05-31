@@ -17,7 +17,7 @@ class Plugin {
    *   @param {!Object} manifest - Application manifest
    *   @returns {Plugin}
    * */
-  init(manifest) {
+  init(manifest, meta) {
     return this;
   }
 

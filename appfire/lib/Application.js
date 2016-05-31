@@ -30,7 +30,7 @@ var Application = function () {
 
     (this.manifest.plugins || []).forEach(function (meta) {
       var Constructor = meta.type;
-      _this.definePlugin(new Constructor(meta.id));
+      _this.definePlugin(new Constructor(meta.id), meta);
     });
   }
 
@@ -69,15 +69,14 @@ var Application = function () {
     }
   }, {
     key: 'definePlugin',
-    value: function definePlugin(ev) {
-
-      if (!ev || this.plugins.has(ev.id)) {
+    value: function definePlugin(plugin, meta) {
+      if (!plugin || this.plugins.has(plugin.id)) {
         return;
       }
 
-      ev.init(this.manifest);
+      plugin.init(this.manifest, meta);
 
-      this.plugins.set(ev.id, ev);
+      this.plugins.set(plugin.id, plugin);
 
       return this;
     }
